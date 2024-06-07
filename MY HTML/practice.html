@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+    <script>
+        function number of words(str){
+            let count=0;
+            let check=false;
+            for(let i=0;i<str.length;i++){
+                if(str[i]!==' '&&!check){
+                    count++;
+                    check=true;
+                }
+                else if(str[i]===' ')
+                {
+                    check=false;
+                }
+                return count;
+            }
+            var str=prompt("enter any string");
+        document.write("number of words:"+number of words(str));
+        }
+    </script>
+</head>
+<body bgcolor="pink">
+</body>
+</html>

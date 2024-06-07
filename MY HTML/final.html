@@ -1,0 +1,185 @@
+<html>
+<style>
+  /* Timeline Container */
+  body {
+    background: linear-gradient(to right, #ff6a00, white, #51ff00);
+    text-align: center;
+
+    .timeline {
+      background: var(--primary-color);
+      margin: 20px auto;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Card container */
+    .card {
+      position: relative;
+      max-width: 400px;
+    }
+
+    /* setting padding based on even or odd */
+    .card:nth-child(odd) {
+      padding: 30px 0 30px 30px;
+    }
+
+    .card:nth-child(even) {
+      padding: 30px 30px 30px 0;
+    }
+
+    /* Global ::before */
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      border: solid orangered;
+    }
+
+    /* Setting the border of top, bottom, left */
+    .card:nth-child(odd)::before {
+      left: 0px;
+      top: -4.5px;
+      bottom: -4.5px;
+      border-width: 5px 0 5px 5px;
+      border-radius: 50px 0 0 50px;
+    }
+
+    /* Setting the border of top, bottom, right */
+    .card:nth-child(even)::before {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-width: 5px 5px 5px 0;
+      border-radius: 0 50px 50px 0;
+    }
+
+    /* Removing the border if it is the first card */
+    .card:first-child::before {
+      border-top: 0;
+      border-top-left-radius: 0;
+    }
+
+    /* Removing the border if it is the last card  and it's odd */
+    .card:last-child:nth-child(odd)::before {
+      border-bottom: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    /* Removing the border if it is the last card  and it's even */
+    .card:last-child:nth-child(even)::before {
+      border-bottom: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    /* Information about the timeline */
+    .info {
+      display: flex;
+      flex-direction: column;
+      background: #000000;
+      color: rgb(255, 255, 255);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    /* Title of the card */
+    .title {
+      color: rgb(255, 255, 255);
+      position: relative;
+    }
+
+    /* Timeline dot  */
+    .title::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: green;
+      border-radius: 999px;
+      border: 3px solid rgb(0, 0, 0);
+    }
+
+    /* text right if the card is even  */
+    .card:nth-child(even)>.info>.title {
+      text-align: right;
+    }
+
+    /* setting dot to the left if the card is odd */
+    .card:nth-child(odd)>.info>.title::before {
+      left: -45px;
+    }
+
+    /* setting dot to the right if the card is odd */
+    .card:nth-child(even)>.info>.title::before {
+      right: -45px;
+    }
+</style>
+
+<body>
+  <img src="https://i.ytimg.com/vi/5ZFn7bBO4vo/maxresdefault.jpg" style="width: 370px;">
+  <div class="timeline">
+    <div class="outer">
+      <div class="card">
+        <div class="info">
+          <h3 class="title">1885-1905</h3>
+          <ul>
+            <li>1805 Indian National Congress</li>
+            <li>1896 Italy vs Ethiopia War</li>
+            <li>1899-1902 Boer War</li>
+            <li>1904-1905 Russo- Japanese War</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="info">
+          <h3 class="title">Title 2</h3>
+          <p>The Indian National Congress(INC)was not established in 1805,but in 1885.It was founded by A.O.Hume,a
+            retired civil servant, who invited many Indian leaders to form a political organization that would represent
+            the interests of Indians under British rule. The INC became the main force of the Indian independence
+            movement,led by prominent figures such as Mahatma Gandhi,Jawaharlal Nehru,and Bal Gangadhar Tilak.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="info">
+          <h3 class="title">Title 3</h3>
+          <p>There was no war between Italy and Ethiopia in 1986.The two countries fought two wars in the past: the
+            First Italo-Ethiopian War(1895-1896)and the Second Italo-Ethiopian War(1935-1936).The first war ended with a
+            decisive Ethiopian victory at the Battle of Adwa,which preserved Ethiopia’s independence from European
+            colonization.The second war resulted in Italy’s occupation of Ethiopia,which lasted until 1941,when the
+            British and Ethiopian forces liberated the country.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="info">
+          <h3 class="title">Title 4</h3>
+          <p>The Boer War,also known as the South African War,was a conflict between Great Britain and the two Boer
+            republics,the South African Republic(Transvaal)and the Orange Free State,from 1899 to 1902.The war was
+            fought over the British influence and control in Southern Africa,especially after the discovery of gold and
+            diamonds in the Boer territories.The war ended with the British victory and the annexation of the Boer
+            republics into the British Empire.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="info">
+          <h3 class="title">Title 5</h3>
+          <p>The Russo-Japanese War was a conflict between the Russian Empire and the Empire of Japan over their rival
+            imperial ambitions in Manchuria and Korea.The war lasted from 1904 to 1905 and ended with Japan’s
+            victory,which shocked the world and marked the emergence of Japan as a major power in Asia.The war also
+            sparked the 1905 Revolution in Russia,which led to political and social reforms.Some of the main battles of
+            the war were fought at Port Arthur,Mukden,and Tsushima.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <figcaption>
+    <p style="color:blue;font-size:135%;text-align:left;border:2px solid tomato;">
+      💻MADE BY VISHAL TIWARI,SIDDHI PARAB and ARYAN BHANDARI<br>
+
+      Contact-8291569470/8591840464/8097946302<br>
+
+      About-us:We are the students of FYBSC.IT.This webpage is only developed for project submission.</p>
+    </p>
+  </figcaption>
+</body>
+</html>

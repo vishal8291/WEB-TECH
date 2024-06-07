@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>fibonacci series</title>
+<script language="javascript">
+var a=0,b=1,c,n,i; 
+var n=parseInt(prompt("enter the limit:"));
+document.write("<h1>fibonacci series</h1>");
+document.write(a+","+b+",");
+for(i=0;i<n;i++)
+{
+c=a+b;
+document.write(c+",");
+a=b;
+b=c;
+}
+</script>
+</head>
+</html>

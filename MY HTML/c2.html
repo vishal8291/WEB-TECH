@@ -1,0 +1,57 @@
+<html>
+<head>
+<script>
+// Arithmetic Operators
+let a = 2;
+let x = (100 + 10) * a;
+document.write("The value of x is " + x);
+let c = 10;
+c += 5;
+document.write("<br>The value of c is " + c);
+let u = 9;
+let v = 10;
+document.write("<br>");
+document.write(u > v);
+document.write("<br>");
+document.write(u < v);
+let y = 8;
+let z = 8;
+document.write("<br>");
+document.write(y === z); // Use strict equality (===) for comparing values
+let t1 = "ab";
+let t2 = "AB";
+result = t1.localeCompare(t2); // Compare strings case-insensitively
+document.write(result);
+document.write("<br>");
+let c1 = "jo";
+let c2 = "hn";
+let c3 = c1 + " " + c2;
+document.write("Result of concatenation is " + c3);
+document.write("<br>");
+document.write(typeof c3);
+let r = 8;
+if (r > 4) {
+    document.write("<br>r is greater");
+} else {
+    document.write("<br>r is not greater");
+}
+let s = parseInt(prompt("Enter the value of s"));
+if (r < s) {
+    document.write("<br>r is smaller than s");
+} else {
+    document.write("<br>r is greater than or equal to s");
+}
+let num = 0;
+if (num > 0) {
+    document.write("<br>num is greater than zero");
+} else if (num < 0) {
+    document.write("<br>num is smaller than zero");
+} else {
+    document.write("<br>num is zero");
+}
+let age = 21;
+const res = age >= 18 ? "You are eligible" : "You are not eligible";
+document.write("<br>" + res);
+</script>
+</head>
+</html>

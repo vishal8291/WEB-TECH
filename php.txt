@@ -1,0 +1,127 @@
+<?php
+$sql = "CREATE DATABASE myDB";
+if (mysqli_query($conn, $sql)) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . mysqli_error($conn);
+}
+mysqli_close($conn);
+?>
+
+
+
+<?php
+$sql ="CREATE TABLE MyGuests (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(30) NOT NULL,
+    lastname VARCHAR(30) NOT NULL,
+    email VARCHAR(50))";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table MyGuests created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+
+$conn->close();
+?>
+
+$sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('John', 'Doe')";
+
+
+STEP:1 create connection
+STEP:2 check connection
+STEP:3 prepare and bind parameters
+STEP:4 set parameters and execute
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+$sql="create database mydb";
+if(mysqli_query($conn,$sql))
+{
+echo"database created successfuly";
+}
+else{
+echo"error".mysqli_error($conn);
+}
+mysqli_close($conn);
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
